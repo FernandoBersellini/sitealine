@@ -290,8 +290,21 @@ blockquote{
 .localizacao-content{display:grid; grid-template-columns:0.9fr 1.1fr; gap:40px; align-items:start; max-width:920px; margin:0 auto;}
 .localizacao-info .endereco{font-size:15px; color:var(--brown); font-weight:500; margin-bottom:14px;}
 .localizacao-info .acesso{font-size:14px; line-height:1.7;}
-.mapa-wrap{border-radius:2px; overflow:hidden; border:1px solid rgba(62,42,28,0.08);}
+.mapa-wrap{border-radius:2px; overflow:hidden; border:1px solid rgba(62,42,28,0.08); background:#fff;}
 .mapa-wrap iframe{max-width:100%;}
+.localizacao-mapa{display:flex; flex-direction:column;}
+.mapa-link{
+  display:flex; align-items:center; justify-content:center; gap:8px;
+  padding:14px 20px; min-height:44px;
+  font-family:var(--font-body); font-size:13px; letter-spacing:0.04em; font-weight:500;
+  color:var(--gold-dark); background:var(--bg-soft);
+  border-top:1px solid rgba(62,42,28,0.08);
+  transition:background .2s, color .2s;
+}
+.mapa-link::after{
+  content:"↗"; font-size:13px; line-height:1;
+}
+.mapa-link:hover{background:var(--gold-pale); color:var(--brown);}
 
 @media (max-width:767px){
   .localizacao-content{grid-template-columns:1fr;}
